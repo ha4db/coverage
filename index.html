@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-05T04:03:49+00:00">2021-02-05T04:03:49+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-08T07:58:23+00:00">2021-02-08T07:58:23+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>2167</b> relevant lines,
-    <span class="green"><b>2165</b> lines covered</span> and
+    <b>2168</b> relevant lines,
+    <span class="green"><b>2166</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed. </span>
     (<span class="green">
   99.91%
@@ -469,11 +469,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#92caabdc2739e7c77513c8cae231756ed902f5e7" class="src_link" title="app/models/bridge_content_inspection.rb">app/models/bridge_content_inspection.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">26</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">15</td>
+            <td class="cell--number">27</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">16</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">5.53</td>
+            <td class="cell--number">5.25</td>
             
           </tr>
         
@@ -4664,7 +4664,7 @@
 
             
 
-            <code class="ruby">    params.fetch(:bridge_content_inspection, {}).permit(:seek, :position)</code>
+            <code class="ruby">    params.fetch(:bridge_content_inspection, {}).permit(:seek, :position, :pointposition)</code>
           </li>
         </div>
       
@@ -5344,7 +5344,7 @@
 
             
 
-            <code class="ruby">    params.fetch(:bridge_content_inspection, {}).permit(:seek, :position)</code>
+            <code class="ruby">    params.fetch(:bridge_content_inspection, {}).permit(:seek, :position, :pointposition)</code>
           </li>
         </div>
       
@@ -15275,8 +15275,8 @@
     
 
     <div class="t-line-summary">
-      <b>15</b> relevant lines.
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>16</b> relevant lines.
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -15404,12 +15404,23 @@
 
             
 
+            <code class="ruby">  store_accessor :data, :pointposition</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  validates :seek, numericality: { only_integer: false }, allow_blank: true</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -15420,7 +15431,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="14">
             <span class="hits">1</span>
             
 
@@ -15431,7 +15442,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="13" data-linenumber="14">
+          <li class="covered" data-hits="13" data-linenumber="15">
             <span class="hits">13</span>
             
 
@@ -15442,7 +15453,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -15453,7 +15464,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="13" data-linenumber="16">
+          <li class="covered" data-hits="13" data-linenumber="17">
             <span class="hits">13</span>
             
 
@@ -15464,7 +15475,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="13" data-linenumber="17">
+          <li class="covered" data-hits="13" data-linenumber="18">
             <span class="hits">13</span>
             
 
@@ -15475,7 +15486,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="18">
+          <li class="covered" data-hits="11" data-linenumber="19">
             <span class="hits">11</span>
             
 
@@ -15486,7 +15497,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="11" data-linenumber="19">
+          <li class="covered" data-hits="11" data-linenumber="20">
             <span class="hits">11</span>
             
 
@@ -15497,7 +15508,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
@@ -15508,7 +15519,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="22">
             
             
 
@@ -15519,7 +15530,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="23">
             
             
 
@@ -15530,7 +15541,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -15541,7 +15552,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="13" data-linenumber="24">
+          <li class="covered" data-hits="13" data-linenumber="25">
             <span class="hits">13</span>
             
 
@@ -15552,7 +15563,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
@@ -15563,7 +15574,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 

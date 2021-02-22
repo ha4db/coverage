@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-22T10:24:59+00:00">2021-02-22T10:24:59+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-22T13:55:16+00:00">2021-02-22T13:55:16+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>2741</b> relevant lines,
-    <span class="green"><b>2739</b> lines covered</span> and
+    <b>2744</b> relevant lines,
+    <span class="green"><b>2742</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed. </span>
     (<span class="green">
   99.93%
@@ -139,11 +139,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#956eb5f99f4a8d69cf89177bd956b36135fc6562" class="src_link" title="app/controllers/bridge_contents_controller.rb">app/controllers/bridge_contents_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">107</td>
-            <td class="cell--number">40</td>
-            <td class="cell--number">40</td>
+            <td class="cell--number">108</td>
+            <td class="cell--number">41</td>
+            <td class="cell--number">41</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.40</td>
+            <td class="cell--number">2.66</td>
             
           </tr>
         
@@ -1382,9 +1382,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#cf4e9b9d4ef9414186cb10f75778d891821c356c" class="src_link" title="spec/views/bridge_contents/edit.html.slim_spec.rb">spec/views/bridge_contents/edit.html.slim_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">19</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">8</td>
+            <td class="cell--number">20</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -1404,9 +1404,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#b52493657aa83d1645570a67e29ba9e9913f669e" class="src_link" title="spec/views/bridge_contents/new.html.slim_spec.rb">spec/views/bridge_contents/new.html.slim_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">18</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">19</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -4731,8 +4731,8 @@
     
 
     <div class="t-line-summary">
-      <b>40</b> relevant lines.
-      <span class="green"><b>40</b> lines covered</span> and
+      <b>41</b> relevant lines.
+      <span class="green"><b>41</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -5679,13 +5679,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="86">
-            
-            
-
+          <li class="covered" data-hits="13" data-linenumber="86">
+            <span class="hits">13</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    @components = @regular_inspection.bridge.components</code>
           </li>
         </div>
       
@@ -5696,7 +5696,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -5707,12 +5707,23 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="89">
+            
+            
+
+            
+
             <code class="ruby">  # Only allow a list of trusted parameters through.</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="89">
+          <li class="covered" data-hits="1" data-linenumber="90">
             <span class="hits">1</span>
             
 
@@ -5723,24 +5734,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="90">
+          <li class="covered" data-hits="7" data-linenumber="91">
             <span class="hits">7</span>
             
 
             
 
-            <code class="ruby">    params.fetch(:bridge_content, {}).permit(:title, :data, :data_type, :position_entry_type,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="91">
-            
-            
-
-            
-
-            <code class="ruby">                                             :center_x, :center_y, :center_z,</code>
+            <code class="ruby">    params.fetch(:bridge_content, {}).permit(:title, :data, :data_type, :position_entry_type, :component_id,</code>
           </li>
         </div>
       
@@ -5751,7 +5751,7 @@
 
             
 
-            <code class="ruby">                                             :euler_angle_alpha, :euler_angle_beta, :euler_angle_gamma,</code>
+            <code class="ruby">                                             :center_x, :center_y, :center_z,</code>
           </li>
         </div>
       
@@ -5762,7 +5762,7 @@
 
             
 
-            <code class="ruby">                                             :quaternion_one, :quaternion_two, :quaternion_three, :quaternion_four,</code>
+            <code class="ruby">                                             :euler_angle_alpha, :euler_angle_beta, :euler_angle_gamma,</code>
           </li>
         </div>
       
@@ -5773,7 +5773,7 @@
 
             
 
-            <code class="ruby">                                             :bbox_u_r_x, :bbox_u_r_y, :bbox_u_r_z,</code>
+            <code class="ruby">                                             :quaternion_one, :quaternion_two, :quaternion_three, :quaternion_four,</code>
           </li>
         </div>
       
@@ -5784,7 +5784,7 @@
 
             
 
-            <code class="ruby">                                             :bbox_u_l_x, :bbox_u_l_y, :bbox_u_l_z,</code>
+            <code class="ruby">                                             :bbox_u_r_x, :bbox_u_r_y, :bbox_u_r_z,</code>
           </li>
         </div>
       
@@ -5795,7 +5795,7 @@
 
             
 
-            <code class="ruby">                                             :bbox_d_r_x, :bbox_d_r_y, :bbox_d_r_z,</code>
+            <code class="ruby">                                             :bbox_u_l_x, :bbox_u_l_y, :bbox_u_l_z,</code>
           </li>
         </div>
       
@@ -5806,7 +5806,7 @@
 
             
 
-            <code class="ruby">                                             :bbox_d_l_x, :bbox_d_l_y, :bbox_d_l_z,</code>
+            <code class="ruby">                                             :bbox_d_r_x, :bbox_d_r_y, :bbox_d_r_z,</code>
           </li>
         </div>
       
@@ -5817,7 +5817,7 @@
 
             
 
-            <code class="ruby">                                             :photo_dimentions, :date_of_shooting, :projection_method,</code>
+            <code class="ruby">                                             :bbox_d_l_x, :bbox_d_l_y, :bbox_d_l_z,</code>
           </li>
         </div>
       
@@ -5828,7 +5828,7 @@
 
             
 
-            <code class="ruby">                                             :target_material, :damage_or_not, :representative_photo,</code>
+            <code class="ruby">                                             :photo_dimentions, :date_of_shooting, :projection_method,</code>
           </li>
         </div>
       
@@ -5839,7 +5839,7 @@
 
             
 
-            <code class="ruby">                                             :pointcloud_data_id, :pointcloud_creation_name,</code>
+            <code class="ruby">                                             :target_material, :damage_or_not, :representative_photo,</code>
           </li>
         </div>
       
@@ -5850,7 +5850,7 @@
 
             
 
-            <code class="ruby">                                             :pointcloud_created_at, :pointcloud_measurement_method,</code>
+            <code class="ruby">                                             :pointcloud_data_id, :pointcloud_creation_name,</code>
           </li>
         </div>
       
@@ -5861,7 +5861,7 @@
 
             
 
-            <code class="ruby">                                             :pointcloud_measurement_environment, :pointcloud_measuring_equipment,</code>
+            <code class="ruby">                                             :pointcloud_created_at, :pointcloud_measurement_method,</code>
           </li>
         </div>
       
@@ -5872,7 +5872,7 @@
 
             
 
-            <code class="ruby">                                             :pointcloud_analysis_method, :pointcloud_software,</code>
+            <code class="ruby">                                             :pointcloud_measurement_environment, :pointcloud_measuring_equipment,</code>
           </li>
         </div>
       
@@ -5883,7 +5883,7 @@
 
             
 
-            <code class="ruby">                                             :pointcloud_crs, :pointcloud_reference_point_x,</code>
+            <code class="ruby">                                             :pointcloud_analysis_method, :pointcloud_software,</code>
           </li>
         </div>
       
@@ -5894,7 +5894,7 @@
 
             
 
-            <code class="ruby">                                             :pointcloud_reference_point_y, :pointcloud_reference_point_z)</code>
+            <code class="ruby">                                             :pointcloud_crs, :pointcloud_reference_point_x,</code>
           </li>
         </div>
       
@@ -5905,12 +5905,23 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">                                             :pointcloud_reference_point_y, :pointcloud_reference_point_z)</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="107">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="108">
             
             
 
@@ -62310,8 +62321,8 @@
     
 
     <div class="t-line-summary">
-      <b>8</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -62395,7 +62406,7 @@
 
             
 
-            <code class="ruby">    @regular_inspection = assign(:regular_inspection, FactoryBot.create(:regular_inspection))</code>
+            <code class="ruby">    assign(:components, [])</code>
           </li>
         </div>
       
@@ -62406,18 +62417,18 @@
 
             
 
-            <code class="ruby">    @bridge_content = assign(:bridge_content,</code>
+            <code class="ruby">    @regular_inspection = assign(:regular_inspection, FactoryBot.create(:regular_inspection))</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">                             FactoryBot.create(:bridge_content, regular_inspection: @regular_inspection))</code>
+            
+
+            <code class="ruby">    @bridge_content = assign(:bridge_content,</code>
           </li>
         </div>
       
@@ -62428,7 +62439,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">                             FactoryBot.create(:bridge_content, regular_inspection: @regular_inspection))</code>
           </li>
         </div>
       
@@ -62439,18 +62450,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="12">
+            
             
 
             
 
-            <code class="ruby">  it &#39;renders the edit bridge_content form&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -62461,12 +62472,23 @@
 
             
 
+            <code class="ruby">  it &#39;renders the edit bridge_content form&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    render</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -62477,7 +62499,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="16">
             <span class="hits">1</span>
             
 
@@ -62488,7 +62510,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -62499,7 +62521,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -62510,7 +62532,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 
@@ -62521,7 +62543,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 
@@ -62768,8 +62790,8 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>10</b> relevant lines.
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -62853,7 +62875,7 @@
 
             
 
-            <code class="ruby">    @regular_inspection = FactoryBot.create(:regular_inspection)</code>
+            <code class="ruby">    assign(:components, [])</code>
           </li>
         </div>
       
@@ -62864,7 +62886,7 @@
 
             
 
-            <code class="ruby">    assign(:regular_inspection, @regular_inspection)</code>
+            <code class="ruby">    @regular_inspection = FactoryBot.create(:regular_inspection)</code>
           </li>
         </div>
       
@@ -62875,18 +62897,18 @@
 
             
 
-            <code class="ruby">    assign(:bridge_content, BridgeContent.new(regular_inspection: @regular_inspection))</code>
+            <code class="ruby">    assign(:regular_inspection, @regular_inspection)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    assign(:bridge_content, BridgeContent.new(regular_inspection: @regular_inspection))</code>
           </li>
         </div>
       
@@ -62897,18 +62919,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="12">
+            
             
 
             
 
-            <code class="ruby">  it &#39;renders new bridge_content form&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -62919,12 +62941,23 @@
 
             
 
+            <code class="ruby">  it &#39;renders new bridge_content form&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    render</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -62935,7 +62968,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="16">
             <span class="hits">1</span>
             
 
@@ -62946,7 +62979,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -62957,7 +62990,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -62968,7 +63001,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 

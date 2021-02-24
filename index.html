@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-24T10:49:24+00:00">2021-02-24T10:49:24+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-24T11:32:51+00:00">2021-02-24T11:32:51+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>2749</b> relevant lines,
-    <span class="green"><b>2747</b> lines covered</span> and
+    <b>2750</b> relevant lines,
+    <span class="green"><b>2748</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed. </span>
     (<span class="green">
   99.93%
@@ -348,11 +348,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#bc60a237b5adb39a352a87f9ee119fd764bb8779" class="src_link" title="app/models/bridge.rb">app/models/bridge.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">64</td>
-            <td class="cell--number">31</td>
-            <td class="cell--number">31</td>
+            <td class="cell--number">71</td>
+            <td class="cell--number">32</td>
+            <td class="cell--number">32</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.52</td>
+            <td class="cell--number">1.50</td>
             
           </tr>
         
@@ -15517,8 +15517,8 @@
     
 
     <div class="t-line-summary">
-      <b>31</b> relevant lines.
-      <span class="green"><b>31</b> lines covered</span> and
+      <b>32</b> relevant lines.
+      <span class="green"><b>32</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -15844,7 +15844,7 @@
 
             
 
-            <code class="ruby">  attr_json :priority, :string</code>
+            <code class="ruby">  attr_json :priority, :integer, default: 0</code>
           </li>
         </div>
       
@@ -16042,7 +16042,7 @@
 
             
 
-            <code class="ruby">  enum availabillity_of_alternative_route_type: {</code>
+            <code class="ruby">  enum priority_type: {</code>
           </li>
         </div>
       
@@ -16053,7 +16053,7 @@
 
             
 
-            <code class="ruby">    unknown: 0,</code>
+            <code class="ruby">    priority_unselected: 0,</code>
           </li>
         </div>
       
@@ -16064,7 +16064,7 @@
 
             
 
-            <code class="ruby">    available: 1,</code>
+            <code class="ruby">    priority_a: 1,</code>
           </li>
         </div>
       
@@ -16075,7 +16075,7 @@
 
             
 
-            <code class="ruby">    unavailable: 2</code>
+            <code class="ruby">    priority_b: 2,</code>
           </li>
         </div>
       
@@ -16086,7 +16086,7 @@
 
             
 
-            <code class="ruby">  }</code>
+            <code class="ruby">    priority_c: 3</code>
           </li>
         </div>
       
@@ -16097,29 +16097,29 @@
 
             
 
+            <code class="ruby">  }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="53">
+          <li class="covered" data-hits="1" data-linenumber="54">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  enum freeway_or_public_road_type: {</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="54">
-            
-            
-
-            
-
-            <code class="ruby">    unselected: 0,</code>
+            <code class="ruby">  enum availabillity_of_alternative_route_type: {</code>
           </li>
         </div>
       
@@ -16130,7 +16130,7 @@
 
             
 
-            <code class="ruby">    freeway: 1,</code>
+            <code class="ruby">    unknown: 0,</code>
           </li>
         </div>
       
@@ -16141,7 +16141,7 @@
 
             
 
-            <code class="ruby">    public_road: 2</code>
+            <code class="ruby">    available: 1,</code>
           </li>
         </div>
       
@@ -16152,7 +16152,7 @@
 
             
 
-            <code class="ruby">  }</code>
+            <code class="ruby">    unavailable: 2</code>
           </li>
         </div>
       
@@ -16163,29 +16163,29 @@
 
             
 
+            <code class="ruby">  }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="59">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="59">
+          <li class="covered" data-hits="1" data-linenumber="60">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def full_title</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="16" data-linenumber="60">
-            <span class="hits">16</span>
-            
-
-            
-
-            <code class="ruby">    return title if kana_title.blank?</code>
+            <code class="ruby">  enum freeway_or_public_road_type: {</code>
           </li>
         </div>
       
@@ -16196,18 +16196,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    unselected: 0,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="62">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="62">
+            
             
 
             
 
-            <code class="ruby">    &quot;#{title} (#{kana_title})&quot;</code>
+            <code class="ruby">    freeway: 1,</code>
           </li>
         </div>
       
@@ -16218,12 +16218,89 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    public_road: 2</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="64">
+            
+            
+
+            
+
+            <code class="ruby">  }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="66">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def full_title</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="16" data-linenumber="67">
+            <span class="hits">16</span>
+            
+
+            
+
+            <code class="ruby">    return title if kana_title.blank?</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="68">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="69">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    &quot;#{title} (#{kana_title})&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="70">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
             
             
 

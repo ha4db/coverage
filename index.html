@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-01T12:06:20+00:00">2021-03-01T12:06:20+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-01T12:27:18+00:00">2021-03-01T12:27:18+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>2819</b> relevant lines,
-    <span class="green"><b>2816</b> lines covered</span> and
+    <b>2820</b> relevant lines,
+    <span class="green"><b>2817</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
   99.89%
@@ -315,11 +315,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#6ecde95c83bff3a60be26f4ec2b710111d380ac1" class="src_link" title="app/jobs/game_tile_job.rb">app/jobs/game_tile_job.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">27</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">16</td>
+            <td class="cell--number">29</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">17</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.38</td>
+            <td class="cell--number">2.41</td>
             
           </tr>
         
@@ -14896,8 +14896,8 @@
     
 
     <div class="t-line-summary">
-      <b>16</b> relevant lines.
-      <span class="green"><b>16</b> lines covered</span> and
+      <b>17</b> relevant lines.
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -14992,7 +14992,7 @@
 
             
 
-            <code class="ruby">    bridge_content = BridgeContent.find(bridge_content_id)</code>
+            <code class="ruby">    bridge_content = BridgeContent.find_by_id(bridge_content_id)</code>
           </li>
         </div>
       
@@ -15003,7 +15003,7 @@
 
             
 
-            <code class="ruby">    return unless bridge_content.data_type.to_i == BridgeContent.data_types[:ortho]</code>
+            <code class="ruby">    return if bridge_content.nil?</code>
           </li>
         </div>
       
@@ -15025,7 +15025,7 @@
 
             
 
-            <code class="ruby">    exec_perform(bridge_content)</code>
+            <code class="ruby">    return unless bridge_content.data_type.to_i == BridgeContent.data_types[:ortho]</code>
           </li>
         </div>
       
@@ -15036,29 +15036,29 @@
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="13">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">  private</code>
+            <code class="ruby">    exec_perform(bridge_content)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -15080,29 +15080,29 @@
 
             
 
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  def exec_perform(bridge_content)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="17">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    bridge_content.data.open do |file|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="18">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">      target_dir = Rails.root.join(&#39;public&#39;, &#39;ortho_images&#39;, bridge_content.id.to_s)</code>
           </li>
         </div>
       
@@ -15113,7 +15113,7 @@
 
             
 
-            <code class="ruby">      target_dir = File.join(&#39;/tmp&#39;, &#39;ortho_images&#39;, bridge_content.id.to_s) if Rails.env == &#39;test&#39;</code>
+            <code class="ruby">    bridge_content.data.open do |file|</code>
           </li>
         </div>
       
@@ -15124,7 +15124,7 @@
 
             
 
-            <code class="ruby">      FileUtils.rm_rf(target_dir)</code>
+            <code class="ruby">      target_dir = Rails.root.join(&#39;public&#39;, &#39;ortho_images&#39;, bridge_content.id.to_s)</code>
           </li>
         </div>
       
@@ -15135,7 +15135,7 @@
 
             
 
-            <code class="ruby">      game_tile = GameTile.new(file.path, target_dir)</code>
+            <code class="ruby">      target_dir = File.join(&#39;/tmp&#39;, &#39;ortho_images&#39;, bridge_content.id.to_s) if Rails.env == &#39;test&#39;</code>
           </li>
         </div>
       
@@ -15146,7 +15146,7 @@
 
             
 
-            <code class="ruby">      zoom_range = game_tile.make</code>
+            <code class="ruby">      FileUtils.rm_rf(target_dir)</code>
           </li>
         </div>
       
@@ -15157,7 +15157,7 @@
 
             
 
-            <code class="ruby">      bridge_content.ortho_tile_info = { min_zoom: zoom_range.first, max_zoom: zoom_range.last }</code>
+            <code class="ruby">      game_tile = GameTile.new(file.path, target_dir)</code>
           </li>
         </div>
       
@@ -15168,12 +15168,34 @@
 
             
 
+            <code class="ruby">      zoom_range = game_tile.make</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="25">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">      bridge_content.ortho_tile_info = { min_zoom: zoom_range.first, max_zoom: zoom_range.last }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="26">
+            <span class="hits">3</span>
+            
+
+            
+
             <code class="ruby">      bridge_content.save</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -15184,7 +15206,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
@@ -15195,7 +15217,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 

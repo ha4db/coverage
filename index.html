@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-02T06:25:03+00:00">2021-03-02T06:25:03+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-02T23:03:56+00:00">2021-03-02T23:03:56+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>2832</b> relevant lines,
-    <span class="green"><b>2829</b> lines covered</span> and
+    <b>2833</b> relevant lines,
+    <span class="green"><b>2830</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
   99.89%
@@ -447,11 +447,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#7e6244c2ae33e161b576ec6f0976647dcb8c226e" class="src_link" title="app/models/game_tile.rb">app/models/game_tile.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">117</td>
-            <td class="cell--number">81</td>
-            <td class="cell--number">81</td>
+            <td class="cell--number">118</td>
+            <td class="cell--number">82</td>
+            <td class="cell--number">82</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">13.07</td>
+            <td class="cell--number">12.96</td>
             
           </tr>
         
@@ -21010,8 +21010,8 @@
     
 
     <div class="t-line-summary">
-      <b>81</b> relevant lines.
-      <span class="green"><b>81</b> lines covered</span> and
+      <b>82</b> relevant lines.
+      <span class="green"><b>82</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -21392,7 +21392,7 @@
 
             
 
-            <code class="ruby">    min_zoom = (Math.log(TILE_SIZE) / Math.log(2)).to_i</code>
+            <code class="ruby">    min_zoom = 8</code>
           </li>
         </div>
       
@@ -21403,18 +21403,18 @@
 
             
 
-            <code class="ruby">    [min_zoom..(max_zoom + 1), max_zoom]</code>
+            <code class="ruby">    max_zoom = 15 if max_zoom &gt; 15</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="36">
-            
-            
-
+          <li class="covered" data-hits="4" data-linenumber="36">
+            <span class="hits">4</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    [min_zoom..(max_zoom + 1), max_zoom]</code>
           </li>
         </div>
       
@@ -21425,12 +21425,23 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="38">
+          <li class="covered" data-hits="1" data-linenumber="39">
             <span class="hits">1</span>
             
 
@@ -21441,7 +21452,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="39">
+          <li class="covered" data-hits="12" data-linenumber="40">
             <span class="hits">12</span>
             
 
@@ -21452,7 +21463,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="40">
+          <li class="covered" data-hits="12" data-linenumber="41">
             <span class="hits">12</span>
             
 
@@ -21463,7 +21474,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="41">
+          <li class="covered" data-hits="12" data-linenumber="42">
             <span class="hits">12</span>
             
 
@@ -21474,7 +21485,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="42">
+          <li class="covered" data-hits="12" data-linenumber="43">
             <span class="hits">12</span>
             
 
@@ -21485,7 +21496,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="43">
+          <li class="covered" data-hits="12" data-linenumber="44">
             <span class="hits">12</span>
             
 
@@ -21496,7 +21507,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="44">
+          <li class="covered" data-hits="12" data-linenumber="45">
             <span class="hits">12</span>
             
 
@@ -21507,7 +21518,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
@@ -21518,7 +21529,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
@@ -21529,7 +21540,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="47">
+          <li class="covered" data-hits="1" data-linenumber="48">
             <span class="hits">1</span>
             
 
@@ -21540,7 +21551,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
@@ -21551,7 +21562,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="49">
+          <li class="covered" data-hits="12" data-linenumber="50">
             <span class="hits">12</span>
             
 
@@ -21562,7 +21573,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="50">
+          <li class="covered" data-hits="12" data-linenumber="51">
             <span class="hits">12</span>
             
 
@@ -21573,7 +21584,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="51">
+          <li class="covered" data-hits="12" data-linenumber="52">
             <span class="hits">12</span>
             
 
@@ -21584,7 +21595,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -21595,7 +21606,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="53">
+          <li class="covered" data-hits="12" data-linenumber="54">
             <span class="hits">12</span>
             
 
@@ -21606,7 +21617,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="54">
+          <li class="covered" data-hits="12" data-linenumber="55">
             <span class="hits">12</span>
             
 
@@ -21617,7 +21628,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="55">
+          <li class="covered" data-hits="12" data-linenumber="56">
             <span class="hits">12</span>
             
 
@@ -21628,7 +21639,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="56">
+          <li class="covered" data-hits="12" data-linenumber="57">
             <span class="hits">12</span>
             
 
@@ -21639,7 +21650,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="57">
+          <li class="covered" data-hits="12" data-linenumber="58">
             <span class="hits">12</span>
             
 
@@ -21650,7 +21661,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="59">
             
             
 
@@ -21661,7 +21672,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="59">
+          <li class="covered" data-hits="12" data-linenumber="60">
             <span class="hits">12</span>
             
 
@@ -21672,7 +21683,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="60">
+          <li class="covered" data-hits="12" data-linenumber="61">
             <span class="hits">12</span>
             
 
@@ -21683,7 +21694,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="61">
+          <li class="covered" data-hits="12" data-linenumber="62">
             <span class="hits">12</span>
             
 
@@ -21694,7 +21705,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="62">
+          <li class="covered" data-hits="12" data-linenumber="63">
             <span class="hits">12</span>
             
 
@@ -21705,7 +21716,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="63">
+          <li class="covered" data-hits="12" data-linenumber="64">
             <span class="hits">12</span>
             
 
@@ -21716,7 +21727,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="64">
+          <li class="covered" data-hits="12" data-linenumber="65">
             <span class="hits">12</span>
             
 
@@ -21727,7 +21738,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
+          <li class="never" data-hits="" data-linenumber="66">
             
             
 
@@ -21738,7 +21749,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="66">
+          <li class="never" data-hits="" data-linenumber="67">
             
             
 
@@ -21749,7 +21760,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="67">
+          <li class="covered" data-hits="1" data-linenumber="68">
             <span class="hits">1</span>
             
 
@@ -21760,7 +21771,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="68">
+          <li class="never" data-hits="" data-linenumber="69">
             
             
 
@@ -21771,24 +21782,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="69">
-            <span class="hits">12</span>
-            
-
-            
-
-            <code class="ruby">    n = 0</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="covered" data-hits="12" data-linenumber="70">
             <span class="hits">12</span>
             
 
             
 
-            <code class="ruby">    row = 0</code>
+            <code class="ruby">    n = 0</code>
           </li>
         </div>
       
@@ -21799,7 +21799,7 @@
 
             
 
-            <code class="ruby">    column = 0</code>
+            <code class="ruby">    row = 0</code>
           </li>
         </div>
       
@@ -21810,7 +21810,7 @@
 
             
 
-            <code class="ruby">    total_files = tiles_per_column * tiles_per_row</code>
+            <code class="ruby">    column = 0</code>
           </li>
         </div>
       
@@ -21821,18 +21821,18 @@
 
             
 
-            <code class="ruby">    (n...total_files).each do |i|</code>
+            <code class="ruby">    total_files = tiles_per_column * tiles_per_row</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="40" data-linenumber="74">
-            <span class="hits">40</span>
+          <li class="covered" data-hits="12" data-linenumber="74">
+            <span class="hits">12</span>
             
 
             
 
-            <code class="ruby">      tilebase = File.join(working_dir, &quot;#{zoom}_#{i}.png&quot;)</code>
+            <code class="ruby">    (n...total_files).each do |i|</code>
           </li>
         </div>
       
@@ -21843,7 +21843,7 @@
 
             
 
-            <code class="ruby">      top = row * TILE_SIZE</code>
+            <code class="ruby">      tilebase = File.join(working_dir, &quot;#{zoom}_#{i}.png&quot;)</code>
           </li>
         </div>
       
@@ -21854,7 +21854,7 @@
 
             
 
-            <code class="ruby">      left = column * TILE_SIZE</code>
+            <code class="ruby">      top = row * TILE_SIZE</code>
           </li>
         </div>
       
@@ -21865,7 +21865,7 @@
 
             
 
-            <code class="ruby">      `vips extract_area #{merge_file.path} #{tilebase} #{left} #{top} #{TILE_SIZE} #{TILE_SIZE}`</code>
+            <code class="ruby">      left = column * TILE_SIZE</code>
           </li>
         </div>
       
@@ -21876,7 +21876,7 @@
 
             
 
-            <code class="ruby">      column += 1</code>
+            <code class="ruby">      `vips extract_area #{merge_file.path} #{tilebase} #{left} #{top} #{TILE_SIZE} #{TILE_SIZE}`</code>
           </li>
         </div>
       
@@ -21887,18 +21887,18 @@
 
             
 
-            <code class="ruby">      if column &gt;= tiles_per_column</code>
+            <code class="ruby">      column += 1</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="22" data-linenumber="80">
-            <span class="hits">22</span>
+          <li class="covered" data-hits="40" data-linenumber="80">
+            <span class="hits">40</span>
             
 
             
 
-            <code class="ruby">        column = 0</code>
+            <code class="ruby">      if column &gt;= tiles_per_column</code>
           </li>
         </div>
       
@@ -21909,18 +21909,18 @@
 
             
 
-            <code class="ruby">        row += 1</code>
+            <code class="ruby">        column = 0</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="82">
-            
-            
-
+          <li class="covered" data-hits="22" data-linenumber="82">
+            <span class="hits">22</span>
             
 
-            <code class="ruby">      end</code>
+            
+
+            <code class="ruby">        row += 1</code>
           </li>
         </div>
       
@@ -21931,12 +21931,23 @@
 
             
 
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="84">
+            
+            
+
+            
+
             <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="84">
+          <li class="covered" data-hits="12" data-linenumber="85">
             <span class="hits">12</span>
             
 
@@ -21947,7 +21958,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="85">
+          <li class="never" data-hits="" data-linenumber="86">
             
             
 
@@ -21958,7 +21969,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="86">
+          <li class="never" data-hits="" data-linenumber="87">
             
             
 
@@ -21969,7 +21980,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="87">
+          <li class="covered" data-hits="1" data-linenumber="88">
             <span class="hits">1</span>
             
 
@@ -21980,7 +21991,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="88">
+          <li class="covered" data-hits="12" data-linenumber="89">
             <span class="hits">12</span>
             
 
@@ -21991,7 +22002,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="89">
+          <li class="covered" data-hits="12" data-linenumber="90">
             <span class="hits">12</span>
             
 
@@ -22002,7 +22013,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="90">
+          <li class="covered" data-hits="12" data-linenumber="91">
             <span class="hits">12</span>
             
 
@@ -22013,7 +22024,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="91">
+          <li class="covered" data-hits="12" data-linenumber="92">
             <span class="hits">12</span>
             
 
@@ -22024,7 +22035,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="92">
+          <li class="never" data-hits="" data-linenumber="93">
             
             
 
@@ -22035,7 +22046,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="93">
+          <li class="covered" data-hits="12" data-linenumber="94">
             <span class="hits">12</span>
             
 
@@ -22046,7 +22057,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="40" data-linenumber="94">
+          <li class="covered" data-hits="40" data-linenumber="95">
             <span class="hits">40</span>
             
 
@@ -22057,7 +22068,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="40" data-linenumber="95">
+          <li class="covered" data-hits="40" data-linenumber="96">
             <span class="hits">40</span>
             
 
@@ -22068,7 +22079,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="40" data-linenumber="96">
+          <li class="covered" data-hits="40" data-linenumber="97">
             <span class="hits">40</span>
             
 
@@ -22079,7 +22090,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="40" data-linenumber="97">
+          <li class="covered" data-hits="40" data-linenumber="98">
             <span class="hits">40</span>
             
 
@@ -22090,7 +22101,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="40" data-linenumber="98">
+          <li class="covered" data-hits="40" data-linenumber="99">
             <span class="hits">40</span>
             
 
@@ -22101,7 +22112,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="22" data-linenumber="99">
+          <li class="covered" data-hits="22" data-linenumber="100">
             <span class="hits">22</span>
             
 
@@ -22112,7 +22123,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="22" data-linenumber="100">
+          <li class="covered" data-hits="22" data-linenumber="101">
             <span class="hits">22</span>
             
 
@@ -22123,7 +22134,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="101">
+          <li class="never" data-hits="" data-linenumber="102">
             
             
 
@@ -22134,24 +22145,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="102">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="never" data-hits="" data-linenumber="103">
             
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -22162,12 +22162,23 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="105">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="105">
+          <li class="covered" data-hits="1" data-linenumber="106">
             <span class="hits">1</span>
             
 
@@ -22178,7 +22189,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="106">
+          <li class="covered" data-hits="12" data-linenumber="107">
             <span class="hits">12</span>
             
 
@@ -22189,24 +22200,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="107">
+          <li class="never" data-hits="" data-linenumber="108">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="12" data-linenumber="108">
-            <span class="hits">12</span>
-            
-
-            
-
-            <code class="ruby">    output_dir = File.join(tile_dir, zoom.to_s)</code>
           </li>
         </div>
       
@@ -22217,12 +22217,23 @@
 
             
 
+            <code class="ruby">    output_dir = File.join(tile_dir, zoom.to_s)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="12" data-linenumber="110">
+            <span class="hits">12</span>
+            
+
+            
+
             <code class="ruby">    FileUtils.mkdir_p(output_dir) unless File.exist?(output_dir)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="110">
+          <li class="never" data-hits="" data-linenumber="111">
             
             
 
@@ -22233,7 +22244,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="111">
+          <li class="covered" data-hits="12" data-linenumber="112">
             <span class="hits">12</span>
             
 
@@ -22244,7 +22255,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="112">
+          <li class="covered" data-hits="12" data-linenumber="113">
             <span class="hits">12</span>
             
 
@@ -22255,7 +22266,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="113">
+          <li class="covered" data-hits="12" data-linenumber="114">
             <span class="hits">12</span>
             
 
@@ -22266,7 +22277,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="114">
+          <li class="covered" data-hits="12" data-linenumber="115">
             <span class="hits">12</span>
             
 
@@ -22277,7 +22288,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="115">
+          <li class="never" data-hits="" data-linenumber="116">
             
             
 
@@ -22288,7 +22299,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="116">
+          <li class="never" data-hits="" data-linenumber="117">
             
             
 
@@ -22299,7 +22310,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="117">
+          <li class="never" data-hits="" data-linenumber="118">
             
             
 

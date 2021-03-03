@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-02T23:03:56+00:00">2021-03-02T23:03:56+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-03T10:25:34+00:00">2021-03-03T10:25:34+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.97
+         3.83
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>2833</b> relevant lines,
-    <span class="green"><b>2830</b> lines covered</span> and
+    <b>2816</b> relevant lines,
+    <span class="green"><b>2813</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed. </span>
     (<span class="green">
   99.89%
@@ -447,11 +447,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#7e6244c2ae33e161b576ec6f0976647dcb8c226e" class="src_link" title="app/models/game_tile.rb">app/models/game_tile.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">118</td>
-            <td class="cell--number">82</td>
-            <td class="cell--number">82</td>
+            <td class="cell--number">96</td>
+            <td class="cell--number">65</td>
+            <td class="cell--number">65</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">12.96</td>
+            <td class="cell--number">9.15</td>
             
           </tr>
         
@@ -21010,8 +21010,8 @@
     
 
     <div class="t-line-summary">
-      <b>82</b> relevant lines.
-      <span class="green"><b>82</b> lines covered</span> and
+      <b>65</b> relevant lines.
+      <span class="green"><b>65</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -21348,7 +21348,7 @@
 
             
 
-            <code class="ruby">    self.width = `identify -format &quot;%w&quot; #{file}`.to_i</code>
+            <code class="ruby">    self.width = `identify -ping -format &quot;%w&quot; #{file}`.to_i</code>
           </li>
         </div>
       
@@ -21359,7 +21359,7 @@
 
             
 
-            <code class="ruby">    self.height = `identify -format &quot;%h&quot; #{file}`.to_i</code>
+            <code class="ruby">    self.height = `identify -ping -format &quot;%h&quot; #{file}`.to_i</code>
           </li>
         </div>
       
@@ -21766,18 +21766,18 @@
 
             
 
-            <code class="ruby">  def crap_images(working_dir, tiles_per_column, tiles_per_row, zoom, merge_file)</code>
+            <code class="ruby">  def crap_images(working_dir, zoom, merge_file)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="69">
-            
-            
-
+          <li class="covered" data-hits="12" data-linenumber="69">
+            <span class="hits">12</span>
             
 
-            <code class="ruby">    # crop image</code>
+            
+
+            <code class="ruby">    vips_opts = &quot;--suffix .png --tile-size 256 --basename image_#{zoom} --depth one --overlap 0 --background 0&quot;</code>
           </li>
         </div>
       
@@ -21788,7 +21788,7 @@
 
             
 
-            <code class="ruby">    n = 0</code>
+            <code class="ruby">    `vips dzsave #{merge_file.path} #{working_dir}/image #{vips_opts}`</code>
           </li>
         </div>
       
@@ -21799,73 +21799,73 @@
 
             
 
-            <code class="ruby">    row = 0</code>
+            <code class="ruby">    merge_file.delete</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="72">
+          <li class="never" data-hits="" data-linenumber="72">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="73">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="74">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def generate_tiles(working_dir, zoom)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="12" data-linenumber="75">
             <span class="hits">12</span>
             
 
             
 
-            <code class="ruby">    column = 0</code>
+            <code class="ruby">    search_file = File.join(working_dir, &quot;image_#{zoom}_files&quot;, &#39;0&#39;, &#39;*.png&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="73">
+          <li class="covered" data-hits="12" data-linenumber="76">
             <span class="hits">12</span>
             
 
             
 
-            <code class="ruby">    total_files = tiles_per_column * tiles_per_row</code>
+            <code class="ruby">    total_tiles = Dir[search_file]</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="74">
+          <li class="covered" data-hits="12" data-linenumber="77">
             <span class="hits">12</span>
             
 
             
 
-            <code class="ruby">    (n...total_files).each do |i|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="40" data-linenumber="75">
-            <span class="hits">40</span>
-            
-
-            
-
-            <code class="ruby">      tilebase = File.join(working_dir, &quot;#{zoom}_#{i}.png&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="40" data-linenumber="76">
-            <span class="hits">40</span>
-            
-
-            
-
-            <code class="ruby">      top = row * TILE_SIZE</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="40" data-linenumber="77">
-            <span class="hits">40</span>
-            
-
-            
-
-            <code class="ruby">      left = column * TILE_SIZE</code>
+            <code class="ruby">    total_tiles.each do |file_path|</code>
           </li>
         </div>
       
@@ -21876,7 +21876,7 @@
 
             
 
-            <code class="ruby">      `vips extract_area #{merge_file.path} #{tilebase} #{left} #{top} #{TILE_SIZE} #{TILE_SIZE}`</code>
+            <code class="ruby">      base_name = File.basename(file_path, &#39;.png&#39;)</code>
           </li>
         </div>
       
@@ -21887,7 +21887,7 @@
 
             
 
-            <code class="ruby">      column += 1</code>
+            <code class="ruby">      target = File.join(tile_dir, zoom.to_s, &quot;#{base_name}.png&quot;)</code>
           </li>
         </div>
       
@@ -21898,29 +21898,29 @@
 
             
 
-            <code class="ruby">      if column &gt;= tiles_per_column</code>
+            <code class="ruby">      `cp -f #{file_path} #{target}`</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="22" data-linenumber="81">
-            <span class="hits">22</span>
+          <li class="never" data-hits="" data-linenumber="81">
+            
             
 
             
 
-            <code class="ruby">        column = 0</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="22" data-linenumber="82">
-            <span class="hits">22</span>
+          <li class="never" data-hits="" data-linenumber="82">
+            
             
 
             
 
-            <code class="ruby">        row += 1</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -21931,254 +21931,12 @@
 
             
 
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="84">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="12" data-linenumber="85">
-            <span class="hits">12</span>
-            
-
-            
-
-            <code class="ruby">    merge_file.delete</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="86">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="87">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="88">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def generate_tiles(working_dir, zoom, tiles_per_column)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="12" data-linenumber="89">
-            <span class="hits">12</span>
-            
-
-            
-
-            <code class="ruby">    total_tiles = Dir[File.join(working_dir, &quot;#{zoom}_*.png&quot;)].length</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="12" data-linenumber="90">
-            <span class="hits">12</span>
-            
-
-            
-
-            <code class="ruby">    n = 0</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="12" data-linenumber="91">
-            <span class="hits">12</span>
-            
-
-            
-
-            <code class="ruby">    row = 0</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="12" data-linenumber="92">
-            <span class="hits">12</span>
-            
-
-            
-
-            <code class="ruby">    column = 0</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="93">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="12" data-linenumber="94">
-            <span class="hits">12</span>
-            
-
-            
-
-            <code class="ruby">    (n...total_tiles).each do |i|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="40" data-linenumber="95">
-            <span class="hits">40</span>
-            
-
-            
-
-            <code class="ruby">      filename = File.join(working_dir, &quot;#{zoom}_#{i}.png&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="40" data-linenumber="96">
-            <span class="hits">40</span>
-            
-
-            
-
-            <code class="ruby">      target = File.join(tile_dir, zoom.to_s, &quot;#{column}_#{row}.png&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="40" data-linenumber="97">
-            <span class="hits">40</span>
-            
-
-            
-
-            <code class="ruby">      `cp -f #{filename} #{target}`</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="40" data-linenumber="98">
-            <span class="hits">40</span>
-            
-
-            
-
-            <code class="ruby">      column += 1</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="40" data-linenumber="99">
-            <span class="hits">40</span>
-            
-
-            
-
-            <code class="ruby">      if column &gt;= tiles_per_column</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="22" data-linenumber="100">
-            <span class="hits">22</span>
-            
-
-            
-
-            <code class="ruby">        column = 0</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="22" data-linenumber="101">
-            <span class="hits">22</span>
-            
-
-            
-
-            <code class="ruby">        row += 1</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="102">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="103">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="104">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="105">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="106">
+          <li class="covered" data-hits="1" data-linenumber="84">
             <span class="hits">1</span>
             
 
@@ -22189,7 +21947,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="107">
+          <li class="covered" data-hits="12" data-linenumber="85">
             <span class="hits">12</span>
             
 
@@ -22200,7 +21958,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="108">
+          <li class="never" data-hits="" data-linenumber="86">
             
             
 
@@ -22211,7 +21969,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="109">
+          <li class="covered" data-hits="12" data-linenumber="87">
             <span class="hits">12</span>
             
 
@@ -22222,7 +21980,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="110">
+          <li class="covered" data-hits="12" data-linenumber="88">
             <span class="hits">12</span>
             
 
@@ -22233,7 +21991,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="111">
+          <li class="never" data-hits="" data-linenumber="89">
             
             
 
@@ -22244,7 +22002,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="112">
+          <li class="covered" data-hits="12" data-linenumber="90">
             <span class="hits">12</span>
             
 
@@ -22255,7 +22013,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="113">
+          <li class="covered" data-hits="12" data-linenumber="91">
             <span class="hits">12</span>
             
 
@@ -22266,29 +22024,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="114">
+          <li class="covered" data-hits="12" data-linenumber="92">
             <span class="hits">12</span>
             
 
             
 
-            <code class="ruby">      crap_images(working_dir, tiles_per_column, tiles_per_row, zoom, merge_file)</code>
+            <code class="ruby">      crap_images(working_dir, zoom, merge_file)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="115">
+          <li class="covered" data-hits="12" data-linenumber="93">
             <span class="hits">12</span>
             
 
             
 
-            <code class="ruby">      generate_tiles(working_dir, zoom, tiles_per_column)</code>
+            <code class="ruby">      generate_tiles(working_dir, zoom)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="116">
+          <li class="never" data-hits="" data-linenumber="94">
             
             
 
@@ -22299,7 +22057,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="117">
+          <li class="never" data-hits="" data-linenumber="95">
             
             
 
@@ -22310,7 +22068,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="118">
+          <li class="never" data-hits="" data-linenumber="96">
             
             
 
